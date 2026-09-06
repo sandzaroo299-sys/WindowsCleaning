@@ -1,8 +1,7 @@
 const tg = window.Telegram.WebApp;
 tg.ready();
-const API_BASE = 'https://your-backend-domain.com/api'; // замените на свой
+const API_BASE = 'https://windows-cleaning-4.onrender.com/api'; // замените на ваш URL
 
-// Получение telegram_id из initData
 function getTelegramId() {
     const initData = tg.initDataUnsafe;
     if (initData && initData.user) {
@@ -11,7 +10,6 @@ function getTelegramId() {
     return null;
 }
 
-// Обработчики кнопок
 document.getElementById('register-btn').addEventListener('click', showRegistration);
 document.getElementById('new-request-btn').addEventListener('click', showNewRequest);
 document.getElementById('my-requests-btn').addEventListener('click', showMyRequests);
@@ -37,7 +35,6 @@ function showRegistration() {
         </label>
         <button onclick="submitRegistration()">Отправить</button>
     `;
-    // Загрузка домов
     fetch(`${API_BASE}/buildings`)
         .then(res => res.json())
         .then(buildings => {
@@ -91,7 +88,7 @@ function submitRequest() {
     fetch(`${API_BASE}/requests`, {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({telegram_id, service_type, comment, apartment_id: 1}) // apartment_id нужно получить из регистрации
+        body: JSON.stringify({telegram_id, service_type, comment, apartment_id: 1}) // заглушка
     })
     .then(res => res.json())
     .then(data => {
