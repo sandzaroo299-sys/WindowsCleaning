@@ -1,4 +1,5 @@
-const tg = window.Telegram.WebApp;
+const tg =  window.Telegram.WebApp;
+alert('JS загружен и работает!');
 tg.ready();
 const API_BASE = 'https://windowscleaning-4.onrender.com/api'; // замените на ваш URL
 
