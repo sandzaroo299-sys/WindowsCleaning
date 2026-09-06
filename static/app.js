@@ -1,6 +1,6 @@
 const tg = window.Telegram.WebApp;
 tg.ready();
-const API_BASE = 'https://windowscleaning-4.onrender.com//api'; // замените на ваш URL
+const API_BASE = 'https://windowscleaning-4.onrender.com/api'; // замените на ваш URL
 
 function getTelegramId() {
     const initData = tg.initDataUnsafe;
