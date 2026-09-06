@@ -1,0 +1,15 @@
+{
+  "buildings": [
+    {
+      "address": "ул. Ленина, 10",
+      "entrances_count": 1,
+      "floors_count": 9,
+      "apartments": [
+        {"entrance": 1, "floor": 1, "number": "1", "window_side": "unknown"},
+        {"entrance": 1, "floor": 1, "number": "2", "window_side": "unknown"},
+        {"entrance": 1, "floor": 2, "number": "3", "window_side": "unknown"},
+        {"entrance": 1, "floor": 2, "number": "4", "window_side": "unknown"}
+      ]
+    }
+  ]
+}
